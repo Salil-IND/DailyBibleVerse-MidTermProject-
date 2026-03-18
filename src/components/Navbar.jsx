@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png'; 
 
-function Navbar({ theme, toggleTheme }) {
+function Navbar({ theme, toggleTheme, likeList }) {
   return (
     // Changed 'flex-col' to 'flex flex-row' so items align horizontally
     <nav className={`h-20 w-full px-8 flex flex-row items-center justify-between shadow-sm transition-colors duration-300 ${
@@ -20,7 +20,7 @@ function Navbar({ theme, toggleTheme }) {
       
       <div className="flex justify-center items-center space-x-8 flex-1">
         <Link to="/" className="font-medium hover:text-blue-500 hover:underline decoration-blue-400 underline-offset-4 transition duration-200">Verse of the Day</Link>
-        <Link to="/liked-verses" className="font-medium hover:text-blue-500 hover:underline underline-offset-4 decoration-blue-400 transition-colors duration-200">Liked Verses</Link>
+        <Link to="/liked-verses" className="font-medium hover:text-blue-500 hover:underline underline-offset-4 decoration-blue-400 transition-colors duration-200">Liked Verses <span className='text-white text-xs p-1 rounded-2xl bg-red-500 '>{likeList.length}</span></Link>
       </div>
 
       {/* Right: Toggle Button */}
