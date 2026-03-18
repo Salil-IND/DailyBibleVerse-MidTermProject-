@@ -5,7 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base:"DailyBibleVerse-MidTermProject-",
+  base:"/DailyBibleVerse-MidTermProject-/",
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] }),
