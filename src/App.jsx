@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import axios from 'axios'
 import versData from './versData.json'
@@ -112,7 +112,7 @@ function App() {
 
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar theme={theme} toggleTheme={toggleTheme} likeList={likeList}/>
         <Routes>
           <Route path="/" element={
@@ -133,7 +133,7 @@ function App() {
             />
           } />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }
